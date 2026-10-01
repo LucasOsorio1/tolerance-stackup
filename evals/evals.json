@@ -1,0 +1,60 @@
+{
+  "skill_name": "tolerance-stackup",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Bearing stack in a housing: bore depth 52.40 \u00b10.20, two bearings 15.00 \u00b10.05 each, spacer 20.00 \u00b10.10, retaining ring 2.00 \u00b10.05. Ring clearance has to stay between 0.05 and 0.70 mm. Does it work, and what should I change?",
+      "expected_output": "Worst case fails (\u22120.05 to 0.85), RSS passes (0.16 to 0.64); housing is ~70% of variance; worst-case fix is housing \u2264 \u00b10.05; statistical result framed as an estimate with assumptions.",
+      "files": [
+        "evals/files/bearing_stack.json"
+      ],
+      "expectations": [
+        "Reports worst case -0.05 to 0.85 mm failing and RSS about 0.16 to 0.64 mm passing",
+        "Names the housing bore depth as the dominant contributor (~70%)",
+        "Gives the housing tolerance needed to pass worst case (\u00b10.05)",
+        "Says RSS/statistical results are not a guarantee and lists the assumptions",
+        "Shows the chain/loop diagram used"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "im 3d printing a box with a lid. the lid's lip is 50mm wide and the box opening is 50.4mm. my printer is roughly +-0.2mm. will the lid fit or will it be too tight/loose?",
+      "expected_output": "Builds gap = opening \u2212 lip, uses uniform distributions, notes holes/inside dims print undersized and outside oversized, labels assumed spec, recommends a test print.",
+      "files": [
+        "evals/files/lid_fit.json"
+      ],
+      "expectations": [
+        "Uses a uniform distribution because the printer process is unknown",
+        "Reports worst case 0.0 to 0.8 mm (could touch at the tight end)",
+        "Warns that the inside opening tends to print undersized and the lip oversized",
+        "Labels the acceptable-clearance range as an assumption and asks the user to confirm it",
+        "Recommends measuring a test print"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "will a bracket that's 25 +0.1/-0.3 fit into a slot that's 25.2 \u00b10.05? quick answer pls",
+      "expected_output": "Converts bracket to 24.9 \u00b1 0.2; gap 0.3 \u00b1 0.25 worst case \u2192 0.05 to 0.55; always fits.",
+      "files": [
+        "evals/files/bracket.json"
+      ],
+      "expectations": [
+        "Converts 25 +0.1/-0.3 to 24.9 \u00b1 0.2",
+        "Reports worst case 0.05 to 0.55 mm clearance, so it always fits",
+        "Keeps the answer short as requested"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "two plates bolted together with a 4-hole pattern, holes have a position tolerance of \u00d80.2 on both plates, M6 bolts in 6.6 holes. will the bolts always go through?",
+      "expected_output": "Recognizes a 2D positional bolt-pattern problem, not a 1D stack; applies the ASME Y14.5 floating-fastener check T = H - F with stated assumptions (0.6 >= 0.2, so yes); notes the fixed-fastener case if tapped.",
+      "files": [],
+      "expectations": [
+        "Says this is a positional/2D problem, not a 1D stack, and does not run a 1D stack as the answer",
+        "Applies the floating-fastener check T = H - F (6.6 - 6.0 = 0.6 >= 0.2)",
+        "States the assumptions (position at MMC, smallest hole and largest bolt, datums aligned) and asks for the hole size tolerance",
+        "Mentions the fixed-fastener formula if one plate is tapped"
+      ]
+    }
+  ]
+}
