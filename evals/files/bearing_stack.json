@@ -1,0 +1,41 @@
+{
+  "units": "mm",
+  "gap": "clearance between retaining ring and bearing face",
+  "spec": {
+    "min": 0.05,
+    "max": 0.7
+  },
+  "mean_shift": 0.0,
+  "dimensions": [
+    {
+      "name": "Housing bore depth",
+      "nominal": 52.4,
+      "tol": 0.2,
+      "dir": 1
+    },
+    {
+      "name": "Bearing 1 width",
+      "nominal": 15.0,
+      "tol": 0.05,
+      "dir": -1
+    },
+    {
+      "name": "Spacer length",
+      "nominal": 20.0,
+      "tol": 0.1,
+      "dir": -1
+    },
+    {
+      "name": "Bearing 2 width",
+      "nominal": 15.0,
+      "tol": 0.05,
+      "dir": -1
+    },
+    {
+      "name": "Retaining ring thickness",
+      "nominal": 2.0,
+      "tol": 0.05,
+      "dir": -1
+    }
+  ]
+}

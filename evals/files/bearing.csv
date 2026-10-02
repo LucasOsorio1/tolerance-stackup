@@ -1,0 +1,6 @@
+name,nominal,plus,minus,dir
+Housing bore depth,52.40,0.20,-0.20,1
+Bearing 1 width,15.00,0.05,-0.05,-1
+Spacer length,20.00,0.10,-0.10,-1
+Bearing 2 width,15.00,0.05,-0.05,-1
+Retaining ring thickness,2.00,0.05,-0.05,-1

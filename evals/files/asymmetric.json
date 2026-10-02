@@ -1,0 +1,4 @@
+{"units": "mm", "gap": "hole minus pin clearance", "spec": {"min": 0.0},
+ "dimensions": [
+  {"name": "Hole diameter", "nominal": 10.0, "plus": 0.3, "minus": 0.0, "dir": 1},
+  {"name": "Pin diameter", "nominal": 10.0, "plus": 0.0, "minus": -0.1, "dir": -1}]}

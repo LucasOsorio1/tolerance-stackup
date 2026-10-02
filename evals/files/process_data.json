@@ -1,0 +1,6 @@
+{"units": "mm", "spec": {"min": 0.05, "max": 0.70}, "dimensions": [
+  {"name": "Housing bore depth", "nominal": 52.40, "tol": 0.20, "dir": 1, "sigma": 0.04, "process_mean": 52.43},
+  {"name": "Bearing 1 width", "nominal": 15.00, "tol": 0.05, "dir": -1},
+  {"name": "Spacer length", "nominal": 20.00, "tol": 0.10, "dir": -1},
+  {"name": "Bearing 2 width", "nominal": 15.00, "tol": 0.05, "dir": -1},
+  {"name": "Retaining ring thickness", "nominal": 2.00, "tol": 0.05, "dir": -1}]}

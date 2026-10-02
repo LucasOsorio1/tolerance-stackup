@@ -1,0 +1,5 @@
+{"units": "mm", "gap": "lid lip clearance in box opening (diametral, side to side)",
+ "spec": {"min": 0.05, "max": 0.6},
+ "dimensions": [
+  {"name": "Box opening (inside)", "nominal": 50.4, "tol": 0.2, "dir": 1, "dist": "uniform"},
+  {"name": "Lid lip (outside)", "nominal": 50.0, "tol": 0.2, "dir": -1, "dist": "uniform"}]}

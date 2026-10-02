@@ -1,0 +1,3 @@
+{"units": "mm", "gap": "tip deflection", "dimensions": [
+  {"name": "Pivot offset", "nominal": 3.0, "tol": 0.1, "dir": 1, "sensitivity": 2.0},
+  {"name": "Stop height", "nominal": 4.0, "tol": 0.1, "dir": -1}]}

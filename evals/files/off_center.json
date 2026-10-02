@@ -1,0 +1,3 @@
+{"units": "mm", "spec": {"min": 0.5, "max": 1.0}, "dimensions": [
+  {"name": "Slot", "nominal": 30.2, "tol": 0.1, "dir": 1},
+  {"name": "Block stack", "nominal": 30.0, "tol": 0.1, "dir": -1}]}
